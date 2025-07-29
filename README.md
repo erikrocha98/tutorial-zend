@@ -10,4 +10,4 @@ Sistema com zend framework.
 ## Instalação
 1. Clone o repositório
 2. Execute `docker-compose up -d`
-3. Acesse http://localhost:808
+3. Acesse http://localhost:80
