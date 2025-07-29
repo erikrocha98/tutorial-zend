@@ -1,0 +1,20 @@
+# Habilitar rewrite engine
+RewriteEngine On
+
+# Redirecionar tudo para index.php exceto arquivos reais
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+# Configurações de segurança
+Options -Indexes
+
+# Configurar limites de upload
+php_value upload_max_filesize 5M
+php_value post_max_size 5M
+
+# Prevenir acesso a arquivos sensíveis
+<FilesMatch "\.(env|json|lock|yml|yaml)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
