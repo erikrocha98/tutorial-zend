@@ -20,4 +20,5 @@ return [
     'Zend\Router',
     'Zend\Validator',
     'Application',
+    'Album'
 ];
