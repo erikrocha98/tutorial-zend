@@ -6,12 +6,7 @@ use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
-    'controllers' => [
-        'factories' => [
-            Controller\AlbumController::class => InvokableFactory::class,
-        ],
-    ],
-
+    
     //Configuração das rotas da aplicação
     'router' => [
         'routes' => [
