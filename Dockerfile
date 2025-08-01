@@ -16,6 +16,10 @@ RUN mkdir -p /var/www/html/data/cache \
     && chown -R www-data:www-data /var/www/html/data \
     && chmod -R 775 /var/www/html/data
 
+RUN mkdir -p /var/www/html/data && \
+    chown -R www-data:www-data /var/www/html/data && \
+    chmod -R 775 /var/www/html/data
+
 WORKDIR /var/www/html
 
 COPY . /var/www/html
